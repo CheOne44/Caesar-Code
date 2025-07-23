@@ -82,11 +82,17 @@ function decryptWithRandomLetters(message, shiftValue) {
   return decryptMessage(decrypted, shiftValue);
 }
 
-const original = "Garden";
-const shift = 42;
 
-const encrypted = encryptWithRandomLetters(original, shift);
-console.log("Encrypted:", encrypted);
+document.getElementById("encryptBtn").addEventListener("click",() => {
+  const message = document.getElementById("inputText").value;
+  const shift = parseInt(document.getElementById("shift").value);
+   const encrypted = encryptWithRandomLetters(message, shift);
+  document.getElementById("output").textContent = encrypted;
+})
 
-const decrypted = decryptWithRandomLetters(encrypted, shift);
-console.log("Decrypted:", decrypted);
+document.getElementById("decryptBtn").addEventListener("click",() => {
+  const message = document.getElementById("inputText").value;
+  const shift = parseInt(document.getElementById("shift").value);
+  const decrypted = decryptWithRandomLetters(message, shift);
+  document.getElementById("output").textContent = decrypted;
+})

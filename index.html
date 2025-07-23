@@ -3,10 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="code.js"></script>
-</head>
+    <title>Caesar's Code</title>
+    <link rel="stylesheet" href="style.css">
+ </head>
 <body>
-    
+    <h1>Caesar's code</h1>
+    <div class="cryptvalue">
+    <textarea id="inputText" name="textarea"  placeholder="Enter your text to encode"></textarea>
+    <input type="number" id="shift" placeholder="Shift value">
+    </div>
+    <div>
+        <button id="encryptBtn">Encrypt Message</button>
+        <button id="decryptBtn">Decrypt Message</button>
+    </div>
+    <h3>Result:</h3>
+    <div id="output"></div>
+    <script src="code.js"></script>
 </body>
 </html>
